@@ -1,32 +1,51 @@
-
-
 import './App.css';
+import {Link, useMatch, useResolvedPath} from "react-router-dom";
+
 function Navbar() {
-  
 
   return (
-    // <div className= "nav">  
-    //   <div className= "nav-button">
-    //   <div>CMB</div>
 
-    //    <button>Button1</button>
-    //    <button>Button2</button>
-    //    <button>Button3</button>
-    //    </div>
+    // <nav>
+    //   <ul className="nav-list">
+    //     <li className='nav-item'>
+    //       <img className="coors-mountain" src="coors_mountain.png"></img>
 
-    // </div>
+    //       </li>
+    //     <li className='nav-item'>Vote</li>
+    //     <li className='nav-item'>Donate</li>
+    //     <li className='nav-item'>Contact</li>
+    //   </ul>
+    // </nav>
 
     <nav>
       <ul className="nav-list">
-        <li className='nav-item'>
-          <img className="coors-mountain" src="coors_mountain.png"></img>
-          </li>
-        <li className='nav-item'>Vote</li>
-        <li className='nav-item'>Donate</li>
-        <li className='nav-item'>Contact</li>
+        
+        <Link to="/" className='nav-item'>
+          <img className="coors-mountain" src="coors_mountain.png">
+          </img>
+        </Link>
+          
+        <CustomLink to= "/Vote" className='nav-item'>Vote</CustomLink>
+        <CustomLink to= "/Donate" className='nav-item'>Donate</CustomLink>
+        <CustomLink to= "/Contact" className='nav-item'>Contact</CustomLink>
+        
       </ul>
     </nav>
+
   )
 }
 
 export default Navbar
+
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  )
+}
