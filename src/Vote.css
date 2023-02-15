@@ -1,0 +1,38 @@
+.question-box {
+    /* background-color:rgb(100 152 206); */
+
+    border-color: rgb(209, 211, 212);
+    border-style: solid;
+    box-shadow: 2px 2px rgb(209, 211, 212);
+
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    justify-content: flex-end;
+
+    font-family: sans-serif, Arial, Helvetica;
+  
+
+    padding: 1rem 1rem;
+}
+
+.vote-button {
+    text-align: end;
+    
+}
+
+
+
+/* how to select just the button in a div? is it . or #?  */
+button {
+    background-color: rgb(211, 18, 69);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+
+
+}
+fieldset {
+    border:none;
+}
+

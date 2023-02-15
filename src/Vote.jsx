@@ -1,18 +1,7 @@
 import './App.css';
+import './Vote.css'
 
-// function Vote() {
-//     return (
-//         <>
-//         <h1>Voting Page</h1>
-//       
-//         </>
-        
-//     )
-// }
-
-// export default Vote
-
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 
 
 function Vote() {
@@ -46,20 +35,27 @@ function Vote() {
 
     return (
         <>
-            <h2>Is Coors Water?</h2>
-            <fieldset>
-                <input
-                    type="radio"
-                    name="vote"
-                    id="voteYes"
-                    value="yes"
-                    onChange={voteInputChange}
-                />
+            <fieldset >
+            <div className="question-box">
+            <h2>IS COORS WATER?</h2>
+            
+                <div>
+                    <label htmlFor='yes'>
+                        <input
+                        type="radio"
+                        name="vote"
+                        id="voteYes"
+                        value="yes"
+                        onChange={voteInputChange}
+                    />
+                        YES
+                    </label>
+                </div>
 
-                <label htmlFor='yes'>
-                    yes
-                </label>
-
+                <div>
+                
+                
+                <label htmlFor='no'>
                 <input
                     type="radio"
                     name="vote"
@@ -67,42 +63,51 @@ function Vote() {
                     value="no"
                     onChange={voteInputChange}
                 />
-                
-                <label htmlFor='no'>no</label>
+                    NO</label>
+                </div>
 
-                <button onClick={() => postVote()}>
-                    Submit
-                </button>
+                <div className="vote-button">
+                    <button onClick={() => postVote()}>
+                        VOTE
+                    </button>
+                </div>
 
+                </div>
             </fieldset>
-            
+            <fieldset>
+            {/* tehcnically only need current yes or no b/c they are set at the same time */}
+            {(currentYesCount || currentNoCount) 
+            ? 
                 <VoteResults
                     yesCount={currentYesCount}
                     noCount={currentNoCount}
-                /> 
-               
+                    totalCount={currentYesCount +currentNoCount}
+                /> :
+                null}
+            </fieldset>
         </>
 
     )
 }
 export default Vote
 
-// resultProps is a type we made up. It is a dictionary? with 2 key value pairs
-// type VoteResultProps = {
-//     yesCount: number | undefined;
-//     noCount: number | undefined;
-// };
-function VoteResults ({yesCount, noCount}) { 
+
+function VoteResults ({yesCount, noCount, totalCount}) { 
     return (
-        <>
-            <h2>Results</h2>
+        <div className="question-box">
             <p>
-                Coors is Water: {yesCount} votes
+                YES {Math.floor((yesCount/totalCount)*100)}%
             </p>
 
             <p>
-                Coors is NOT Water: {noCount} votes
+                NO {Math.floor(100-(yesCount/totalCount)*100)}%
             </p>
-        </>
+
+            <p>
+                Total Votes {totalCount}
+            </p>
+
+            {/* need a var for total votes  */}
+        </div>
     )
 }
