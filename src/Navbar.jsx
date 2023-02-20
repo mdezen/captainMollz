@@ -4,19 +4,6 @@ import {Link, useMatch, useResolvedPath} from "react-router-dom";
 function Navbar() {
 
   return (
-
-    // <nav>
-    //   <ul className="nav-list">
-    //     <li className='nav-item'>
-    //       <img className="coors-mountain" src="coors_mountain.png"></img>
-
-    //       </li>
-    //     <li className='nav-item'>Vote</li>
-    //     <li className='nav-item'>Donate</li>
-    //     <li className='nav-item'>Contact</li>
-    //   </ul>
-    // </nav>
-
     <nav>
       <ul className="nav-list">
         
