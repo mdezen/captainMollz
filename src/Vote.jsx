@@ -53,8 +53,6 @@ function Vote() {
                 </div>
 
                 <div>
-                
-                
                 <label htmlFor='no'>
                 <input
                     type="radio"
@@ -71,8 +69,8 @@ function Vote() {
                         VOTE
                     </button>
                 </div>
+            </div>
 
-                </div>
             </fieldset>
             <fieldset>
             {/* tehcnically only need current yes or no b/c they are set at the same time */}
@@ -94,7 +92,7 @@ export default Vote
 
 function VoteResults ({yesCount, noCount, totalCount}) { 
     return (
-        <div className="question-box">
+        <div className="results-box">
             <p>
                 YES {Math.floor((yesCount/totalCount)*100)}%
             </p>

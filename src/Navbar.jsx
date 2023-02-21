@@ -12,9 +12,9 @@ function Navbar() {
           </img>
         </Link>
           
-        <CustomLink to= "/Vote" className='nav-item'>Vote</CustomLink>
-        <CustomLink to= "/Donate" className='nav-item'>Donate</CustomLink>
-        <CustomLink to= "/Contact" className='nav-item'>Contact</CustomLink>
+        <CustomLink to= "/Vote" className='nav-item'>VOTE</CustomLink>
+        <CustomLink to= "/Donate" className='nav-item'>DONATE</CustomLink>
+        <CustomLink to= "/Contact" className='nav-item'>CONTACT</CustomLink>
         
       </ul>
     </nav>

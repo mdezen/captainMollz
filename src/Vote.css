@@ -1,18 +1,17 @@
 .question-box {
-    /* background-color:rgb(100 152 206); */
-
+    margin-top: 50px;
     border-color: rgb(209, 211, 212);
     border-style: solid;
     box-shadow: 2px 2px rgb(209, 211, 212);
-
-    display: flex;
-    justify-content: center;
-    flex-direction:column;
-    justify-content: flex-end;
-
     font-family: sans-serif, Arial, Helvetica;
-  
+    padding: 1rem 1rem;
+}
 
+.results-box {
+    border-color: rgb(209, 211, 212);
+    border-style: solid;
+    box-shadow: 2px 2px rgb(209, 211, 212);
+    font-family: sans-serif, Arial, Helvetica;
     padding: 1rem 1rem;
 }
 
@@ -20,7 +19,6 @@
     text-align: end;
     
 }
-
 
 
 /* how to select just the button in a div? is it . or #?  */
