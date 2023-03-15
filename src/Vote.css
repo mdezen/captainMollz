@@ -1,5 +1,4 @@
 .question-box {
-    margin-top: 50px;
     border-color: rgb(209, 211, 212);
     border-style: solid;
     box-shadow: 2px 2px rgb(209, 211, 212);
@@ -20,9 +19,7 @@
     
 }
 
-
-/* how to select just the button in a div? is it . or #?  */
-button {
+#vote-button {
     background-color: rgb(211, 18, 69);
     color: white;
     border: none;
@@ -30,6 +27,7 @@ button {
 
 
 }
+
 fieldset {
     border:none;
 }

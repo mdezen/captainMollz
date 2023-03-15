@@ -1,9 +1,7 @@
-
 body {
-  margin:0 auto;
+  margin: 50px auto;
   font-family: sans-serif
 }
-
 
 .nav-list {
   display: flex; 
@@ -16,11 +14,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  
-
 } 
-
-
 
 .nav-item:first-child{
   margin-right:auto;
@@ -29,7 +23,6 @@ body {
 }
 
 .nav-item {
-  /* why does padding work but not margin?  */
   padding-right: 2rem;
   text-decoration: none;
   font-weight: 900;
@@ -41,7 +34,6 @@ body {
   
 }
 
-/* removes underline when hovering */
 .nav-item:hover {
   text-decoration: none;
 }
@@ -54,20 +46,21 @@ h1 {
   text-align: center;
 }
 
- /* coors light silver
- background-color: rgb(209, 211, 212); 
+ /* coors light colors RGB values
+  light grey
+  background-color: rgb(209, 211, 212); 
 
-  coors light red 
+  red 
   background-color: rgb(211, 18, 69); 
 
-   coors light dark gray
-   background-color: rgb(113, 112, 115);  
+  dark gray
+  background-color: rgb(113, 112, 115);  
 
-   coors light dark blue 
-   51,114,185
+  dark blue 
+  51,114,185
 
-   coors light grey blue 
-   100 152 206
+  grey blue 
+  100 152 206
 
-   coors light light blue 
-   232, 248, 255*/
+  light blue 
+  232, 248, 255*/

@@ -4,7 +4,7 @@ import Home from "./Home"
 import Vote from './Vote'
 import Donate from "./Donate"
 import Contact from "./Contact"
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom'
 
 
 function App() {
